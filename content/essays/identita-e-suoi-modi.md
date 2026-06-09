@@ -34,7 +34,7 @@ l'interscambiabilità nel type-checker.
 
 Poi c'è l'**identità proposizionale**: `[] ++ ys ≡ ys` come tipo. Ora
 l'uguaglianza ha una forma — è un oggetto del sistema, non una relazione del
-riduttore con le espressioni. Il tipo `[] ++ ys ≡ ys` ha abitatori: in questo
+riduttore con le espressioni. Il tipo `[] ++ ys ≡ ys` ha abitanti: in questo
 caso specifico, `refl` lo chiude. Ma il fatto che `refl` lo chiuda non è banale
 — accade perché i due lati sono definitoriamente uguali. La giuntura
 proposizionale si apre sopra quella definitoria: il terzo piano sorge dal secondo.
