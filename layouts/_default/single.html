@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article>
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
+    {{- if not .Date.IsZero }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">
+      {{- if eq .Section "essays" -}}
+        {{ .Date.Format "January 2006" }}
+      {{- else -}}
+        {{ .Date.Format "2 January 2006" }}
+      {{- end -}}
+    </time>
+    {{- end }}
+    {{- with .Params.abstract }}
+    <div class="abstract"><p>{{ . }}</p></div>
+    {{- end }}
+  </header>
+  <div class="article-body">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

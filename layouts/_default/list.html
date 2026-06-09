@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section>
+  {{- range .Pages }}
+  <div class="list-item">
+    {{- if not .Date.IsZero }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+    {{- end }}
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </div>
+  {{- end }}
+</section>
+{{ end }}

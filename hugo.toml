@@ -1,0 +1,36 @@
+baseURL      = "https://avit-io.github.io/"
+languageCode = "en"
+title        = "Alessandro Vitturi"
+
+[params]
+  description = ""
+
+[markup]
+  [markup.highlight]
+    noClasses   = false  # classi CSS, non style inline
+    guessSyntax = true
+  [markup.goldmark.renderer]
+    unsafe = true        # HTML grezzo nei post (snippet Agda)
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block  = [["$$", "$$"]]
+      inline = [["$", "$"]]
+
+[taxonomies]
+  tag = "tags"
+
+[[menus.main]]
+  name   = "blog"
+  url    = "/blog/"
+  weight = 1
+
+[[menus.main]]
+  name   = "essays"
+  url    = "/essays/"
+  weight = 2
+
+[[menus.main]]
+  name   = "projects"
+  url    = "/projects/"
+  weight = 3

@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div class="home">
+  {{ .Content }}
+
+  {{- $essays := site.GetPage "/essays" }}
+  {{- $blog   := site.GetPage "/blog"   }}
+
+  {{- with $essays.Pages }}
+  <section class="home-section">
+    <h2>essays</h2>
+    {{- range . }}
+    <div class="list-item">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </div>
+    {{- end }}
+  </section>
+  {{- end }}
+
+  {{- with ($blog.Pages | first 5) }}
+  <section class="home-section">
+    <h2>recent posts</h2>
+    {{- range . }}
+    <div class="list-item">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </div>
+    {{- end }}
+  </section>
+  {{- end }}
+</div>
+{{ end }}
