@@ -1,6 +1,6 @@
 baseURL      = "https://avit-io.github.io/"
 languageCode = "en"
-title        = "Alessandro Vitturi"
+title        = "Alvise Vitturi"
 
 [params]
   description = ""
