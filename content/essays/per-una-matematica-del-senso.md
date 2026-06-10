@@ -28,6 +28,22 @@ Questo non è scetticismo. Non si dice che non possiamo sapere se P è vera. Si 
 
 ---
 
+## L'atto del giudizio
+
+C'è un modo di leggere la notazione `a : A` che porta direttamente al cuore di questa idea.
+
+Frege aveva mostrato che un predicato — `_: A`, con il suo buco — è *insaturo*: ha un vuoto che chiede di essere riempito. Il termine `a` è *saturo*: riempie il vuoto. E la copula — i due punti — non è un terzo ingrediente tra i due. È la *giuntura*: la forma del vuoto, il luogo in cui il saturo si incastra nell'insaturo. Non nomina nulla. Eppure non è inerte: i logici medievali le riconoscevano una *consignificazione* — la copula porta con sé l'atto di composizione, il nexus, e il tempo. È un verbo, non un nome. Non descrive la corrispondenza: la compie.
+
+Da qui il carattere del giudizio `a : A`. Non è una proposizione che potrebbe essere vera o falsa: è l'atto di asserire che `a` è costruito come un `A`. La verità non si applica al giudizio dall'esterno, come un'etichetta messa dopo. Il giudizio *è* l'evento di corrispondenza. Il riconoscimento che la costruzione corrisponde al tipo non è un occhio esterno che controlla se il riempimento è riuscito — è il compimento del riempimento stesso. La copula, come verbo, fa accadere il nexus.
+
+Vero e falso, allora, non sono proprietà che gli oggetti portano già scritte su di sé. Sono eventi della stessa sostanza processuale degli oggetti: accadono nel giudizio, nell'atto in cui il termine e il tipo si incontrano nella copula. Non c'è un `a` da un lato e un valore di verità dall'altro, connessi dopo da qualcosa. C'è l'atto `a : A`, che è insieme la costruzione dell'oggetto e l'evento della corrispondenza. Le cose non conoscono il vero e il falso — stanno in relazione, e dalla relazione emerge l'accadimento.
+
+C'è ancora una sottigliezza. Ridurre la corrispondenza a un evento non vuol dire renderla binaria — un accade-o-non-accade piatto. La copula porta con sé anche la propria *medesimezza*: il problema di quando due riempimenti contano come lo stesso. E la medesimezza non è bivalente: ha modi, gradi, struttura interna. Due costruzioni di `A` possono corrispondere in modi diversi — e i modi di corrispondere sono a loro volta oggetti, con le proprie corrispondenze. La struttura di gruppoide che affiora in MLTT dal tipo identità non è un'aggiunta esterna: è la geometria interna della medesimezza, i tempi che la copula porta con sé come verbo. La corrispondenza non è un sì o un no piatto: è un evento che ha la propria articolazione.
+
+Questo è il senso preciso in cui vero e falso sono della stessa sostanza degli oggetti matematici: un'ontologia sola, processuale, a tutti i livelli.
+
+---
+
 ## Il senso dei connettivi
 
 Una delle conseguenze più concrete di questo impegno riguarda il significato delle costanti logiche.
@@ -44,15 +60,23 @@ Dummett aveva formulato questo come una tesi semantica generale: il significato 
 
 ## La formalizzazione e il suo doppio
 
-Arend Heyting formalizzò la logica intuizionista negli anni Trenta. Brouwer accolse la formalizzazione con distanza — non perché fosse sbagliata, ma perché coglieva il rischio di uno spostamento sottile: quando si scrivono le regole, il centro di gravità si sposta dall'*atto* alle *regole*. Il sistema formale diventa l'oggetto, e il suo studio può procedere indipendentemente dall'impegno filosofico che lo aveva motivato.
+Arend Heyting formalizzò la logica intuizionista negli anni Trenta. Brouwer accolse la formalizzazione con distanza — non perché fosse sbagliata, ma perché coglieva un rischio reale: quando si scrivono le regole, il centro di gravità si sposta dall'*atto* alle *regole*. Il sistema formale diventa l'oggetto, e il suo studio può procedere indipendentemente dall'impegno che lo aveva motivato.
 
-Martin-Löf aveva affrontato questo rischio direttamente. Le *meaning explanations* della MLTT non sono parte del sistema — sono il livello pre-matematico che dà senso al sistema. Prima di qualunque regola formale, si spiega cosa sia una forma canonica, cosa significhi computare, cosa conti come elemento di un tipo. Le regole vengono dopo, come modo di regimentare questo livello di significato già stabilito.
+Martin-Löf aveva risposto a questo rischio con le *meaning explanations*: spiegazioni pre-matematiche del significato delle regole, che non appoggiano il sistema a un altro formalismo ma a un resoconto di cosa sia una forma canonica, cosa significhi computare, cosa conti come elemento di un tipo. La struttura è: significato prima, formalismo dopo. Il formalismo non giustifica il significato — lo regimenta.
 
-La struttura è: significato prima, formalismo dopo. Non il contrario.
+Ma formalizzare significa necessariamente erigere un muro. La barra che nella sintassi dei contesti separa le ipotesi dal giudizio non è un ornamento: è la condizione che rende il sistema praticabile. Senza di essa non c'è type-checking, non c'è decidibilità, non c'è composizionalità. Il muro deve esserci.
 
-Ma questa struttura è fragile nell'uso quotidiano. Un proof assistant implementa le regole — non le spiegazioni di significato. Quando si scrive un termine in Agda o Lean, il type-checker verifica che il termine sia ben tipato: controlla che le regole siano rispettate. Non verifica che l'uso sia filosoficamente coerente, che ci sia un impegno costruttivo soggiacente, che la prova sia costruita nel senso inteso da Martin-Löf. Quelle cose non si possono formalizzare — stanno a monte.
+La questione è dove posizionarlo.
 
-Il sistema è corretto e utile. Ma è un residuo del senso, non il senso stesso.
+Il muro non è costruito con una sostanza diversa da ciò che divide. Le meaning explanations stanno a monte del sistema formale, ma sono scritte nello stesso linguaggio costruttivo — sono dello stesso ordine processuale delle costruzioni che giustificano. Il muro è operativo, non ontologico. È la condizione sintattica del fare, non il confine tra due tipi di realtà.
+
+E posizionarlo diversamente dà matematiche diverse.
+
+Martin-Löf lo posizionò rendendo l'uguaglianza giudizionale proof-irrelevant: due termini o sono lo stesso o non lo sono, senza gradi di medesimezza. Questa scelta regala un eliminatore dell'identità pulito — J funziona senza dover aprire la struttura interna delle prove — e rende il type-checking decidibile. Ma ha un costo: la medesimezza della copula, i suoi modi interni, viene tagliata via. HoTT tenta di recuperarla dall'altro lato — dal lato ontologico, con l'assioma di univalenza; la teoria cubica le dà una regola di computazione ma introduce un primitivo geometrico; la Higher Observational Type Theory cerca di spostare il muro così che la medesimezza affiori come sviluppo del significato dei costruttori di tipo, senza assiomi aggiunti dall'esterno.
+
+Tre posizioni del muro, tre matematiche diverse. Il fatto stesso che recuperare la medesimezza richieda un intervento dall'esterno mostra che il muro era operativo: se fosse ontologico, non si potrebbe attraversare dall'altro lato.
+
+La domanda "dove posizionare il muro" non è una questione tecnica. È la domanda fondazionale: cosa lasciare sul lato del significato, cosa sul lato dell'oggetto — sapendo che la risposta non è dettata né dall'uno né dall'altro, ma è una scelta con conseguenze che attraversano tutta la matematica che si vuole fare.
 
 ---
 
