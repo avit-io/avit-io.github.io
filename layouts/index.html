@@ -8,10 +8,11 @@
   {{- with $essays.Pages }}
   <section class="home-section">
     <h2>essays</h2>
-    {{- range . }}
+    {{- range $i, $p := . }}
     <div class="list-item">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="idx">{{ printf "%02d" (add $i 1) }}</span>
+      <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "Jan 2006" }}</time>
+      <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
     </div>
     {{- end }}
   </section>
@@ -20,10 +21,11 @@
   {{- with ($blog.Pages | first 5) }}
   <section class="home-section">
     <h2>recent posts</h2>
-    {{- range . }}
+    {{- range $i, $p := . }}
     <div class="list-item">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="idx">{{ printf "%02d" (add $i 1) }}</span>
+      <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2 Jan 2006" }}</time>
+      <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
     </div>
     {{- end }}
   </section>

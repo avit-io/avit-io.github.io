@@ -1,11 +1,12 @@
 {{ define "main" }}
 <section>
-  {{- range .Pages }}
+  {{- range $i, $p := .Pages }}
   <div class="list-item">
-    {{- if not .Date.IsZero }}
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+    <span class="idx">{{ printf "%02d" (add $i 1) }}</span>
+    {{- if not $p.Date.IsZero }}
+    <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "Jan 2006" }}</time>
     {{- end }}
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
   </div>
   {{- end }}
 </section>
