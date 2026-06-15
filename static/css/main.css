@@ -260,6 +260,16 @@ section > .list-item:first-of-type,
 .list-item:hover .idx { color: var(--accent); }
 
 /* ── Home ───────────────────────────────────────────────────────────────── */
+.home-intro {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  margin: 0 0 2.75rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+}
 .home-section { margin-bottom: 2.5rem; }
 .home-section h2 {
   font-family: var(--font-display);
