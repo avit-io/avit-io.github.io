@@ -234,15 +234,16 @@ article { max-width: var(--measure); }
   align-items: baseline;
   gap: 1.25rem;
   padding: 0.7rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px dotted var(--border);
 }
 section > .list-item:first-of-type,
-.home-section .list-item:first-of-type { border-top: 1px solid var(--border); }
+.home-section .list-item:first-of-type { border-top: 1px dotted var(--border); }
 
 .list-item .idx {
   color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
   letter-spacing: 0.05em;
   flex-shrink: 0;
 }
@@ -274,11 +275,104 @@ section > .list-item:first-of-type,
 .home-section h2 {
   font-family: var(--font-display);
   font-size: 0.85rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
   margin: 0 0 0.25rem;
   font-weight: 700;
+}
+.home-section h2::before {
+  content: '●';
+  color: var(--accent);
+  font-size: 0.6em;
+  vertical-align: 0.2em;
+  margin-right: 0.6rem;
+}
+
+/* ── Projects ───────────────────────────────────────────────────────────── */
+.proj-intro {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  margin: 0 0 3rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+  max-width: var(--measure);
+}
+
+.proj-group { margin-bottom: 3rem; }
+
+.proj-group-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.25rem;
+}
+.proj-group-title::before {
+  content: '●';
+  color: var(--accent);
+  font-size: 0.6em;
+  vertical-align: 0.2em;
+  margin-right: 0.6rem;
+}
+
+.proj {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(7rem, auto) 1fr;
+  align-items: baseline;
+  column-gap: 1.25rem;
+  row-gap: 0.15rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px dotted var(--border);
+  text-decoration: none;
+}
+.proj-list > .proj:first-child { border-top: 1px dotted var(--border); }
+
+.proj-idx {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.proj-name {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.proj-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.proj-dep {
+  grid-column: 3;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.proj:hover .proj-idx,
+.proj:hover .proj-name { color: var(--accent); }
+.proj:hover .proj-dep { opacity: 1; }
+
+@media (max-width: 600px) {
+  .proj {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .proj-idx { display: none; }
+  .proj-dep { grid-column: 1; }
 }
 
 /* ── Matematica (KaTeX) ─────────────────────────────────────────────────── */

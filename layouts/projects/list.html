@@ -1,7 +1,25 @@
 {{ define "main" }}
-<article>
-  <div class="article-body">
-    {{ .Content }}
+<section class="projects">
+  {{ with .Params.intro }}
+  <p class="proj-intro">{{ . }}</p>
+  {{ end }}
+
+  {{ range .Params.groups }}
+  <div class="proj-group">
+    <h2 class="proj-group-title">{{ .name }}</h2>
+    <div class="proj-list">
+      {{ range $i, $p := .items }}
+      <a class="proj" href="{{ $p.url }}">
+        <span class="proj-idx">{{ printf "%02d" (add $i 1) }}</span>
+        <span class="proj-name">{{ $p.name }}</span>
+        <span class="proj-desc">{{ $p.desc }}</span>
+        {{ with $p.dep }}<span class="proj-dep">↳ {{ . }}</span>{{ end }}
+      </a>
+      {{ end }}
+    </div>
   </div>
-</article>
+  {{ end }}
+
+  {{ with .Content }}<div class="article-body">{{ . }}</div>{{ end }}
+</section>
 {{ end }}
