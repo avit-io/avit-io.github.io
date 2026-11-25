@@ -1,6 +1,18 @@
 <header class="site-header">
   <nav>
-    <a class="site-name" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+    <a class="site-name" href="{{ "/" | relURL }}">
+      {{- /* Wizard icon: drop static/img/wizard.svg (and optionally wizard-dark.svg for the dark theme)
+             and it shows up here, small, before the name. Until then nothing is rendered. */}}
+      {{- if fileExists "static/img/wizard.svg" }}
+      <picture class="site-icon">
+        {{- if fileExists "static/img/wizard-dark.svg" }}
+        <source media="(prefers-color-scheme: dark)" srcset="{{ "img/wizard-dark.svg" | relURL }}">
+        {{- end }}
+        <img src="{{ "img/wizard.svg" | relURL }}" alt="" width="22" height="22">
+      </picture>
+      {{- end }}
+      <span>{{ site.Title }}</span>
+    </a>
     <ul>
       {{- range site.Menus.main }}
       <li>

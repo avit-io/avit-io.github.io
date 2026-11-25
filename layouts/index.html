@@ -1,5 +1,10 @@
 {{ define "main" }}
 <div class="home">
+  <picture class="hero">
+    <source media="(prefers-color-scheme: dark)" srcset="{{ "img/hole-dark.svg" | relURL }}">
+    <img src="{{ "img/hole-light.svg" | relURL }}" width="1200" height="330"
+         alt="a black hole and its accretion disk, drawn in dots">
+  </picture>
   {{ .Content }}
 
   {{- $essays := site.GetPage "/essays" }}
