@@ -13,9 +13,9 @@
   --syn-lit: #6e4f12;
   --syn-com: #62553a;
 
-  --font-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, 'Iowan Old Style',
+  --font-serif: 'Alegreya', Charter, 'Bitstream Charter', 'Sitka Text', Cambria, 'Iowan Old Style',
                 'Palatino Linotype', Palatino, Georgia, 'DejaVu Serif', serif;
-  --font-mono:  ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono',
+  --font-mono:  'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono',
                 'Liberation Mono', monospace;
 
   --measure: 66ch;
@@ -40,7 +40,7 @@
 /* ── Reset ──────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { font-size: 18px; }
+html { font-size: 19px; }                      /* Alegreya runs small: Ocra's body is 19px */
 
 body {
   margin: 0;
