@@ -1,16 +1,17 @@
 /* ── Variables ──────────────────────────────────────────────────────────── */
-/* Black and white, like the stippled profile banner: no accent colour.     */
+/* Ocra: nero di vite on ochre in light, ochre on black in dark. The roles  */
+/* (surface, ink, muted, line) follow the Ocra design system.               */
 :root {
-  --bg:      #ffffff;
-  --bg-code: #f4f4f4;
-  --text:    #111111;
-  --muted:   #6b6b6b;
-  --border:  #d4d4d4;
+  --bg:      #efe0b4;
+  --bg-code: #e4d094;
+  --text:    #15130f;
+  --muted:   #594c33;
+  --border:  #15130f2e;
 
-  --syn-kw:  #111111;
-  --syn-ty:  #3a3a3a;
-  --syn-lit: #4f4f4f;
-  --syn-com: #8a8a8a;
+  --syn-kw:  #15130f;
+  --syn-ty:  #4a3d22;
+  --syn-lit: #6e4f12;
+  --syn-com: #62553a;
 
   --font-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, 'Iowan Old Style',
                 'Palatino Linotype', Palatino, Georgia, 'DejaVu Serif', serif;
@@ -23,16 +24,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:      #0b0b0b;
-    --bg-code: #161616;
-    --text:    #eeeeee;
-    --muted:   #9a9a9a;
-    --border:  #333333;
+    --bg:      #12110e;
+    --bg-code: #0a0907;
+    --text:    #ebddb2;
+    --muted:   #a99b78;
+    --border:  #ebddb22e;
 
-    --syn-kw:  #eeeeee;
-    --syn-ty:  #cfcfcf;
-    --syn-lit: #b8b8b8;
-    --syn-com: #7a7a7a;
+    --syn-kw:  #f2e4b8;
+    --syn-ty:  #e0c98a;
+    --syn-lit: #d6b866;
+    --syn-com: #9a8c69;
   }
 }
 

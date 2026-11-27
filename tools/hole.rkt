@@ -62,5 +62,5 @@
         (printf "<circle cx=\"~a\" cy=\"~a\" r=\"1.3\"/>\n" (/ (round (* 10 (car p))) 10) (/ (round (* 10 (cdr p))) 10)))
       (printf "</g>\n</svg>\n"))))
 
-(picture "static/img/hole-light.svg" "#111")
-(picture "static/img/hole-dark.svg" "#eee")
+(picture "static/img/hole-light.svg" "#15130f")          ; Ocra: nero
+(picture "static/img/hole-dark.svg" "#d6b866")           ; Ocra: ocra
