@@ -22,15 +22,15 @@ title        = "Alvise Vitturi"
 
 [[menus.main]]
   name   = "blog"
-  url    = "/blog/"
+  pageRef = "/blog"
   weight = 1
 
 [[menus.main]]
   name   = "essays"
-  url    = "/essays/"
+  pageRef = "/essays"
   weight = 2
 
 [[menus.main]]
   name   = "projects"
-  url    = "/projects/"
+  pageRef = "/projects"
   weight = 3
