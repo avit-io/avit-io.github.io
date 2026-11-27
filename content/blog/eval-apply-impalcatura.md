@@ -138,5 +138,6 @@ dell'impalcatura, il passo che rilegge, e insieme a lui la regola η.
 
 È così che Pie, il linguaggio di *The Little Typer*, decide `same-as`. Ed è così che lo decide
 bottega, il nucleo di teoria dei tipi in Racket su cui sto costruendo: quando una prova si chiude
-con `refl`, nessuno ha riscritto niente. Ha valutato `eval`, ha riletto il readback, e i due lati
-sono risultati la stessa forma normale. Ma questo è il prossimo post.
+con `refl`, nessuno ha riscritto niente. `eval` ha calcolato i due lati, e il confronto è entrato
+nelle closure con una variabile fresca, rileggendo solo quanto serviva per trovarli uguali. Ma
+questo è [il prossimo post](/blog/bottega-eval-apply-con-i-tipi/).
