@@ -1,8 +1,8 @@
 ---
 title: projects
-intro: "a formally verified observability stack in agda — metrics, logs, alerts and dashboards, correct by construction. nothing renders empty, nothing inverts a threshold: the type checker rejects it first."
+intro: "two workshops, one bet: a proof is a test that covers every input. in agda, a formally verified observability stack: metrics, logs, alerts and dashboards, correct by construction. in racket, the scheme of sicp: a total mltt core in the style of pie, and a tower of #langs on top whose tests are proofs."
 groups:
-  - name: observability
+  - name: agda · observability
     items:
       - name: prometea
         url: https://github.com/avit-io/prometea
@@ -22,7 +22,27 @@ groups:
         url: https://github.com/avit-io/penelope
         desc: verifiable grafana dashboards — panel/query types & layout, proven
         dep: henql · loqeul
-  - name: substrate
+  - name: racket · bottega
+    items:
+      - name: bottega
+        url: https://github.com/avit-io/bottega
+        desc: a total mltt core in racket, in the style of pie — Π, Σ, ≡, data, refl by computation
+      - name: "#lang disegno"
+        url: https://github.com/avit-io/bottega/tree/main/disegno
+        desc: dagger pipelines declared, not run — the plan is data, then graphql
+        dep: bottega
+      - name: "#lang prospettiva"
+        url: https://github.com/avit-io/bottega/tree/main/prospettiva
+        desc: one model, many environments as projections — the invariants are theorems, nix is the store
+        dep: bottega
+      - name: "#lang affresco"
+        url: https://github.com/avit-io/bottega/tree/main/affresco
+        desc: the elm architecture, total and server-side — the tests are proofs
+        dep: bottega
+      - name: disegno
+        url: https://github.com/avit-io/disegno
+        desc: the chez scheme original — the mltt kernel and the dagger planner bottega grew from
+  - name: agda · substrate
     items:
       - name: janus
         url: https://github.com/avit-io/janus

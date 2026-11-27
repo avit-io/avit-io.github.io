@@ -7,6 +7,22 @@
   </picture>
   {{ .Content }}
 
+  {{- with .Params.workshops }}
+  <section class="home-section workshops">
+    {{- range . }}
+    <div class="workshop">
+      <h2>{{ .name }}</h2>
+      <p>{{ .line }}</p>
+      <ul>
+        {{- range .items }}
+        <li><a href="{{ .url }}">{{ .name }}</a></li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+  </section>
+  {{- end }}
+
   {{- $essays := site.GetPage "/essays" }}
   {{- $blog   := site.GetPage "/blog"   }}
 
